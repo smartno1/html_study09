@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body {
+            margin: 0; /* mg 탭 */
+        }
+
+        .container {
+            width: 400px; /* w400 탭*/
+            height: 300px;
+            border: 4px solid red;
+
+            margin-left: 100px; /* ml100 탭 */
+            margin-top: 100px; /* mt100 탭 */
+        }
+
+        .box {
+            width: 25%; /* w200p 탭*/
+            height: 100px;
+            border: 4px solid gray;
+            background: #333;
+        }
+
+        .box:first-child {
+            margin-bottom: 30px; /* mb30 탭 */
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+        .box:last-child {
+            /* [상하좌우] */
+            margin: 20px; /* m20 탭 */
+            
+            /* [상하] [좌우] */
+            margin: 20px 30px;
+
+            /* [상][좌우][하] */
+            margin: 40px 50px 60px;
+
+            /* [상][우][하][좌] 위에서부터 시계방향 */
+            margin: 10px 20px 30px 40px;
+        }
+
+        header {
+            height: 100px;
+            background: orange;
+        }
+
+        header .inner {
+            width: 50%;
+            height: 80px;
+            background: red;
+
+            margin: 0 auto; 
+            /* 
+            상하 0, 좌우 auto 
+            -> width가 50%이므로 남은 50%를 자동으로 반반씩 좌우가 가져감 
+            -> 중앙배치공식 
+            */
+            /* 가로길이가 100%면 남은 여백이 없어서 정렬불가 */
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="inner"></div>
+    </header>
+    
+    <!-- .container>.box*2 -->
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+
+
+    
+
+</body>
+</html>

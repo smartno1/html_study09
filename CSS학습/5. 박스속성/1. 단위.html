@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        div {
+            border: 2px solid gray;
+            /* 숨어있는 기본값
+            width: auto;  ==> 100%(가로전체)
+            height: auto; ==> 0px부터 글자크기에 맞춰서 
+            */
+        }
+
+        /* % :부모길이의 상대적 비율 */
+        .root { /* 부모는  body */
+            width: 50%;
+        }
+
+        .parent { /* 부모는  root */
+            width: 50%;
+        }
+
+        .child { /* 부모는 parent */
+            width: 50%;
+        }
+
+        .box {
+            height:50vh; 
+            /* 
+            vh : 어떤 디바이스건 전체화면 세로의 50% 
+            50% 가 안되는이유 : 부모인 body 도 세로기본값인 auto가 0px부터 시작하기 때문.
+            */
+            background: tomato;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <!-- .root>.parent>.child*2 -->
+    <div class="root">ROOT
+        <div class="parent">PARENT
+            <div class="child">CHILD1</div>
+            <div class="child">CHILD2</div>
+        </div>
+    </div>
+
+
+    <div class="box">BOX</div>
+
+
+</body>
+</html>
