@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 일치 선택자 ----------------------------------------------------*/
+        li.orang {  /* li 태그이면서 클래스가 orang 인 것,
+             띄어쓰지말것. 띄우면 완전 다른 다른 의미*/
+            color: orange;
+        }
+
+        span.orang {
+            background: tomato;
+        }
+
+        aside.banner#roll { /* aside태그이면서 클래스banner이면서 아이디roll  */
+            width: 50px;
+            height: 100px;
+            background: red;
+        }
+
+        h1.yellow.low.primary#change {
+            background: yellow;
+        }
+        /* -----------------------------------------------------------------*/
+
+        /* 자식 선택자 : 자식은 직속 하위 태그를 말함.
+                        부모는 직속 상위 태그를 말함.
+                        > 으로 표현                    */
+        /* 맨 뒤에(자식)가 타겟, 앞에(부모)는 조건  */
+
+        ul > .orang {   
+        /* 부모가 ul인 .orang 에 적용. */
+            font-style: 24px;
+            background: red;
+        }
+
+        .shadow > p {
+        /* 부모에게 클래스 쉐도우가 있는 p 태그에 적용 */
+            font-style: italic;
+        }
+
+        div.shadow > em {   /* 디테일하게 해주는게 좋다.==>적용범위확정을위해 */
+            color: green;
+        }
+
+        html > body > .shadow > ul > .reverse {
+            background: aqua;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <aside class="banner image" id="roll"></aside>
+
+    <em>안녕안녕</em>
+
+    <!-- div>(ul>li*3)+div+p+span -->
+    <div class="shadow">
+
+        <em>잘가잘가</em>
+
+        <ul>
+            <li id="apple">사과</li>
+            <li class="reverse">딸기</li>
+            <li class="orang reverse" id="big">오렌지</li>
+        </ul>
+        <div class="reverse">당근</div>
+        <p>토마토</p>
+        <span class="orang">오렌지</span>
+
+        <h1 id="change" class="fruits yellow low primary">파인애플</h1>
+    </div>
+
+
+
+</body>
+</html>

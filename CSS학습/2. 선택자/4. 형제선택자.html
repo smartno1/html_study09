@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        /* 인접 형제 선택자 : +     -------------------------------------------
+            형 : 상위가 아닌 같은 지위에서 위에있는 태그
+            제 : 상위가 아닌 같은 지위에서 아래에있는 태그
+        */
+
+        .or + li { /*  li 중에 형이 .or인 것*/
+            color: orangered;
+        }
+
+        li + .or { /* .or 중에 형이 li인 것 */
+            background: orange;
+        }
+
+        li + li { /* li 중에 형이 li 인것. ==> 결론적으로 맨위의  li 빼고 다적용
+                    이방식은 게시판에서 사용한다. */
+            font-size: 24px;
+        } 
+        /*---------------------------------------------------------------*/
+
+        /* 일반 형제 선택자 : ~     ----------------------------------------*/
+        .or + li {  /* li이면서 형중 에 .or 이 있는것.*/
+            font-family: cursive;
+        }
+        /*---------------------------------------------------------------*/
+    </style>
+
+
+</head>
+<body>
+
+    <ul>
+        <li class="or">어륀지</li>
+        <li>사과</li>
+        <li>딸기</li>
+        <li class="or">오렌지</li>
+        <li>자몽</li>
+        <li>포도</li>
+    </ul>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        #fruits li:first-child {  /* 조상중에 아이디 fruits인 li중 첫번째 */
+            color: red;
+        }
+
+        
+        #fruits li:last-child {   /* 조상중에 아이디 fruits인 li중 첫번째 */
+            color: yellowgreen;
+        }
+
+        
+        #fruits li:nth-child(5) {   /* 조상중에 아이디 fruits인 li중 (n)1부터 n번째*/
+            color: yellow;
+        }
+
+        /* n: 0부터 순차적으로 대이 해서 선택 */
+        #fruits li:nth-child(2n+1) { /* 2n+1 : 홀수 == odd  */
+            background: aqua;
+        }
+
+        #fruits li:nth-child(2n) {  /* 2n : 짝수 == even  */
+            background: violet;
+        }
+
+        #fruits li:nth-child(3n+1) {
+            font-style: italic;
+        }
+
+        /* 클래스 or 빼고 모두 */
+        #fruits li:not(.or) {
+            font-size: 1.5em;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <!-- ul#fruits>li*7 -->
+    <ul id="fruits">
+        <li>딸기</li>
+        <li>사과</li>
+        <li class="or">오렌지</li>
+        <li>망고</li>
+        <li>바나나</li>
+        <li>자몽</li>
+        <li>라임</li>
+    </ul>
+
+</body>
+</html>

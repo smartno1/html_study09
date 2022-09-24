@@ -1,0 +1,15 @@
+/*
+    3.외부스타일.html 과 3-1.외부스타일.html  에 동시에 적용된다.
+*/
+
+h1 {
+    font-size: 20px;
+    font-family: fantasy;
+    color: blue;
+}
+
+h2 {
+    font-size: 30px;
+    font-family: cursive;
+    color: orange;
+}

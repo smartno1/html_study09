@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background: orange;
+        }
+
+        /* hover : 요소에 마우스를 올렸을 때 */ 
+        a:hover {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: red;
+        }
+
+        .box:hover {
+            width: 200px;
+            background: red;
+
+            transition: 1.7s; /* trs 탭 */
+        }
+
+        /* active : 요소에 마우스를 누르고 있는 동안 */
+        .box:active {
+            height: 200px;
+            background: yellowgreen;
+
+        }
+
+        /* focus : 요소에 포커싱(탭, 클릭) 했을 때 */
+        #common {
+            width: 100px;
+            border: 1px solid #000;
+            outline: none;
+            padding: 5px 10px;
+            transition: 0.6s;
+        }
+
+        #common:focus {
+            border-color: red; /* bdc 탭 */
+            width: 200px;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <!-- a 탭 -->
+    <a href="#">Hello!!</a>
+
+    <!-- div.box 탭 == .box탭 -->
+    <div class="box"></div>
+
+    <!--  input#common 탭 -->
+    <input type="text" id="common">
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 후손선택자 : 후손은 자식을 포함한 하위의 모든 태그 
+                        조상은 부모를 포함한 상위의 모든 태그  */
+
+        div .orang {
+        /* 클래스 orang에 적용하는데 조상중에 div태그가 있는 것. */
+            background: orange;
+        }
+
+        .shadow em {
+            background: tomato;
+        }
+
+        .shadow * { /* 조상이 클래스 shadow 인 모든 태그 */
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <aside class="banner image" id="roll"></aside>
+
+    <em>안녕안녕</em>
+
+    <!-- div>(ul>li*3)+div+p+span -->
+    <div class="shadow">
+
+        <em>잘가잘가</em>
+
+        <ul>
+            <li id="apple">사과</li>
+            <li class="reverse">딸기</li>
+            <li class="orang reverse" id="big">오렌지</li>
+        </ul>
+        <div class="reverse">당근</div>
+        <p>토마토<em>마토마토</em></p>
+
+        <span class="orang">오렌지</span>
+
+        <h1 id="change" class="fruits yellow low primary">파인애플</h1>
+    </div>
+
+
+
+</body>
+</html>
