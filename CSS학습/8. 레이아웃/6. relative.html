@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .container {
+            margin: 100px;
+            border: 2px solid #000;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            background: orange;
+            border: 4px solid red;
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        .box:nth-child(2) {
+            /* position 은 항상 left,right,top,bottom과 같이 쓰인다. */
+            /* relative : 원래있는 위치를 기준으로한다. */
+            /* 50px 만큼 좌 0(원래위치)에서 우로 +50 만큼 움직여라. */
+            position: relative;
+            left: 50px;
+            /* 위 0(원래위치) 에서 아래로 +50 만큼 움직여라*/
+            top: 50px;
+            /* 아래 0(원래위치) 에서 위로 +30 만큼 움직여라 */
+            bottom: 30px;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+    
+
+    <!-- .container>.box{$}*3 -->
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+
+</body>
+</html>
