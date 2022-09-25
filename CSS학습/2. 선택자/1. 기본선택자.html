@@ -8,6 +8,7 @@
 
     <style>
 
+        /* 태그선택자 */
         * { /* 모든 태그대상으로 각태그마다 적용*/
             font-weight: 700;
             font-size: 24px;
@@ -21,22 +22,25 @@
         li {
             color: green;
         }
-
-        .oran { /* 클래스선택자 : .클래스이름  */
+        
+        /* 클래스선택자 : .클래스이름  */
+        .oran { 
             color: orange;
             background: tomato; /* bg 탭 */
         }
 
+        /* 클래스 스타일을 미리 만들어 놓고 적용하고픈 태그에 클래스이름을 붙여 사용도 가능*/
         .shadow { 
-            /* 클래스 스타일을 미리 만들어 놓고 적용하고픈 태그에 클래스이름을 붙여 사용도 가능*/
             text-shadow: 2px 2px 6px #333;  /* ts 탭 */
         }
 
-        #big {  /* 아이디 선택자 : #아이디  */
+        /* 아이디 선택자 : #아이디  */
+        #big {  
             font-size: 5em; /* fz5e 탭 , em 은 배크기 */
         }
 
-        p, span {   /* 그룹선택자 : ,로 구분하여 그룹화할 태그들을 써주면된다. */
+        /* 그룹선택자 : ,로 구분하여 그룹화할 태그들을 써주면된다. */
+        p, span {   
             font-style: italic;
         }
 
@@ -44,7 +48,8 @@
             font-weight: 400;
         }
 
-        .shadow, #big, section {   /* 다른 선택자들도 그룹화 가능 */
+        /* 다른 선택자들도 그룹화 가능 */
+        .shadow, #big, section {   
             /* ~~~~~~ */
         }
 

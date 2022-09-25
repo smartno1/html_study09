@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .container {
+            width: 700px;
+            padding: 20px;
+            border: 3px solid red;
+            margin: 20px;
+
+            /* 2번방법 */
+            /* overflow: hidden; */
+        }
+
+        /* 1번방법 : 사용하지 않는 4번째 cbox를 만들어 클리어 
+                    내용 무, 설정 무 -> 아무것도 없는박스                
+        */
+        .cbox {
+            clear: both;
+        }
+
+        /* 3번방법 : 가상의 박스를 만들어 클리어 
+            이후 해제가 필요한 곳에 클래스명(.clearfix) 달아주면 해결        
+            - 추천 
+        */
+        .clearfix::after {
+            content: ''; /* after 필수요소 */
+            display: block; /* 도형그리기시 필수요소 */
+            clear: both;
+        }
+
+        .box {
+            width: 200px;
+            height: 150px;
+            border: 3px solid green;
+            background: yellowgreen;
+            border-radius: 20px;
+
+            float: left;
+        }
+
+        .container2 {
+            width: 700px;
+            padding: 20px;
+            border: 3px solid blue;
+            margin: 20px;
+        }
+
+        .container3 {
+            width: 700px;
+            padding: 20px;
+            border: 3px solid green;
+            margin: 20px;
+        }
+
+        
+
+        p {
+            background: red;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <!-- .container>.box*3 -->
+    <div class="container clearfix">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <!-- <div class="cbox"></div> -->
+    </div>
+
+    <div class="container2 clearfix">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <div class="container3 clearfix">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    
+
+
+</body>
+</html>

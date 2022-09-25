@@ -8,21 +8,21 @@
 
     <style>
 
-        #fruits li:first-child {  /* 조상중에 아이디 fruits인 li중 첫번째 */
+        #fruits li:first-child {  /* li중 첫번째인데 조상중에 아이디 fruits가 있는 것  */
             color: red;
         }
 
         
-        #fruits li:last-child {   /* 조상중에 아이디 fruits인 li중 첫번째 */
+        #fruits li:last-child {   /* li중 마지막인데 조상중에 아이디 fruits가 있는 것  */
             color: yellowgreen;
         }
 
         
-        #fruits li:nth-child(5) {   /* 조상중에 아이디 fruits인 li중 (n)1부터 n번째*/
+        #fruits li:nth-child(5) {  /* li중 (n)1부터 n번째인데 조상중에 아이디 fruits인 것 */
             color: yellow;
         }
 
-        /* n: 0부터 순차적으로 대이 해서 선택 */
+        /* n: 0부터 순차적으로 대입 해서 선택 */
         #fruits li:nth-child(2n+1) { /* 2n+1 : 홀수 == odd  */
             background: aqua;
         }
@@ -35,7 +35,7 @@
             font-style: italic;
         }
 
-        /* 클래스 or 빼고 모두 */
+        /* 클래스 or 빼고 모두인데 조상중에 아이디가 fruits인 것 */
         #fruits li:not(.or) {
             font-size: 1.5em;
         }

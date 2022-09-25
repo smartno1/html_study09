@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .img-box {
+            width: 550px;
+            height: 350px;
+            border: 4px dashed gray;
+
+            background-color: orange;
+            background-image: url('../../image/하늘.jpg');
+            /*실제이미지와 이미지박스 크기가 달라 사진이 짤림*/
+            /* 이미지 크기를 조정 */
+            /* background-size: 150px 150px; */
+            /* 바둑판식으로 이미지박스를 채움 -> 한개만나오게 no-repeat */
+            background-repeat: no-repeat;
+            /* 이미지박스안에서 이미지 위치를 조정 
+                left,right,top,bottom,center
+                [] [] : 앞은 좌우 뒤는 위아래
+                px로 지정가능 : 레프트 탑에서 이동.
+                % 로 지정가능 : 레프트 탑에서 이동.
+            */
+            background-position: center; 
+            
+            /* cover :
+                원본이미지 비율을 훼손하지 않고 최대한 박스에 맞춰준다
+                이미지 손실 최소화 */
+            background-size: cover;
+
+            /* 단축 속성 */
+            /*background: orange no-repeat
+                    url('../../image/하늘.jpg')
+                    150px 150px / 150px 150px;*/
+                    /* 앞이 위치 / 뒤가 크기 */
+        }
+
+    </style>
+
+
+</head>
+<body>
+    
+    <div class="img-box"></div>
+
+
+
+</body>
+</html>

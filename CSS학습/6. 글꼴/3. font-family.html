@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 
+        글꼴 검색 및 사용하기
+        구글에 구글폰트 검색 https://fonts.google.com/ 
+        글꼴 검색 -> 필요한 font-weight 체크 -> 오른쪽에 link란 복사
+        -> 헤드에 붙여넣기 -> CSS rules ~~ 에 있는 방법으로 사용
+    -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        div {
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+
+        .font1 {
+            /* 글꼴 : font-family , ff */
+            /* 나열된 순차대로 검색해서 있는 글꼴 적용 */
+            /* 마지막에는 계열을 꼭 써줘야한다. */
+            /* serif : 바탕체 계열 */
+            /* sans-serif : 고딕체 계열 */
+            font-family: '바탕체', candy, 'Red Hat Mono', serif;
+        }
+
+        .font2 {
+            /* 고딕체 계열 */
+            font-family: sans-serif;
+        }
+
+        .font3 {
+            /* 영어 필기체, 한글 궁서체 */
+            font-family: cursive;
+        }
+
+        .font4 {
+            /* 모노스페이스 계열 */
+            /* 글자 하나하나가 차지하는 공간이 동일하여 코딩에 많이 쓰임. */
+            font-family: monospace;
+
+        }
+
+        .font5 {
+            /* 화려한 계열 */
+            font-family: fantasy;
+        }
+
+        .font6 {
+            font-family: 'Noto Sans Mono';
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <!-- .font${hello~ CSS!}*6 -->
+    <div class="font1">hello~ CSS!</div>
+    <div class="font2">hello~ CSS!</div>
+    <div class="font3">hello~ CSS!</div>
+    <div class="font4">hello~ CSS!</div>
+    <div class="font5">hello~ CSS!</div>
+    <div class="font6">hello~ CSS!</div>
+    
+
+
+</body>
+</html>

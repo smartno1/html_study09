@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 
+            컨테이너가 고정되어 있는 경우
+            whidth 를 이용하여 수평배치해제를 할 수 있다.
+        */
+        .container {
+            width: 400px;
+           
+        }
+
+        .box {
+            /*
+                100% = 23%*4(박스크기) + 2%*3(오른쪽여백)
+            */
+            width: 23%;
+            height: 150px;
+            background-color: orange;
+            margin-right: 2%;
+            margin-top: 10px;
+            font-size: 50px;
+            font-weight: 700;
+
+            /* 텍스트 중앙 정렬 (x, y 축) */
+            /* x축 정렬 */
+            text-align: center;
+            /* y축 정렬 : 줄높이를 박스 세로높이와 동일하게 설정 */
+            line-height: 150px;
+
+            /* 박스 수평 배치  */
+            float: right;
+        }
+
+        
+
+
+    </style>
+
+
+</head>
+<body>
+    <!-- 한줄 복사 alt+shift+아래방향키 -->
+
+    <!-- .container>.box{$}*9 -->
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+        <div class="box">10</div>
+        <div class="box">11</div>
+        <div class="box">12</div>
+        <div class="box">13</div>
+        <div class="box">14</div>
+        <div class="box">15</div>
+        <div class="box">16</div>
+    </div>
+</body>
+</html>
