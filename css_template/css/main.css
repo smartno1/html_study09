@@ -31,6 +31,12 @@ body, .wrap {
     font-family: 'Exo 2', sans-serif;
 }
 
+br.mo {
+    display: none;
+    /* 모바일 환경에서 원하는 위치에서 줄바꿈을 하는 설정을 하기위해 br 을 쓰고 display none 으로한다.
+        모바일 에서는 위설정을 풀어주면 원하는 위치에서 줄바꿈 */
+}
+
 /* header style */
 header {
     /* background: tomato; */
@@ -167,14 +173,14 @@ section.about {
     /* background: orange; */
     padding: 80px 0;
 }
-section.about .title {
+section .title {
     text-align: center;
 }
-section.about .title h2{
+section .title h2{
     font-size: 45px;
     margin-bottom: 5px;
 }
-section.about .title p {
+section .title p {
     font-size: 18px;
     color: #555;
 }
@@ -216,3 +222,242 @@ section.about ul li .text p.more{
 
 }
 
+
+/* section innovation style */
+section.innovation {
+    margin-bottom: 150px;
+}
+
+section.innovation .img-box {
+    width: 74%;
+    height: 540px; /* 배경이미지 크지 지정 */
+    margin: 50px auto 0;
+    background: url('../img/product_1.jpg')
+     no-repeat center / cover;
+    
+    position: relative;
+}
+
+section.innovation .img-box .inner {
+    background: #3a3c4e;
+    color: #fff;
+
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%, 0); 
+    /* l 50% t 50% 하면 가운데에 박스의 좌측위 꼭지점이 위치한다
+        transform ~ 설정은 이 박스의 위치를 박스자체가 가운데로 오도록 해주는 역할 */
+}
+
+section.innovation .img-box .inner h3 {
+    background: #fff;
+    color: #222;
+    font-size: 18px;
+    padding: 25px 45px;
+    box-sizing: border-box;
+}
+section.innovation .img-box .inner .bottom {
+    padding: 35px 85px;
+    box-sizing: border-box;
+}
+section.innovation .img-box .inner .bottom p {
+    width: 70%;
+    float: left;
+    line-height: 1.6;
+}
+section.innovation .img-box .inner .bottom a {
+    float: right;
+    background: #ff8342;
+    border-radius: 50px;
+    padding: 7px 30px;
+}
+section.innovation .img-box .inner .bottom a:hover {
+    background: #f86010;
+}
+
+/* section me style */
+section.me {
+    padding: 80px 0; /* 배경사진이 밀리지않게 마진이 아닌 패딩으로 공백을 준다. */
+    margin-bottom: 150px;
+    background: url('../img/me.jpg') 
+        no-repeat center / cover;
+}
+section.me ul.list {
+    width: 74%;
+    margin: 50px auto;
+    /* background: orange; */
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+/* > 직속 자식을 쓰는이유 : 다른곳에 다른 li 가 있어 같이 잡히지 않게 하기 위해 */
+section.me ul.list > li {
+    padding: 30px 60px;
+}
+section.me ul.list > li:first-child {
+    border-bottom: 1px solid #ddd;
+}
+section.me ul.list > li h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    position: relative; /* 아래 포지션이 h3안에서 움직이도록 하기위해 설정 */
+}
+section.me ul.list > li h3 span {
+    position: absolute;
+    left: -35px;
+    color: #ff8342;
+}
+section.me ul.list > li p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+section.me ul.list > li .more {
+    font-size: 16px;
+    font-weight: 700;
+}
+section.me ul.list > li .more span {
+    color: #ff8342;
+    margin-left: 3px;
+    font-size: 14px;
+}
+
+section.me ul.list ul.in {
+    margin-bottom: 30px;
+}
+
+section.me ul.list ul.in li em {
+    float: left;
+    font-weight: 700;
+    width: 12%; /* margin을 줄때 글자수가 다르기때문에 뒤의 글앞머리가 일직선이 되지 않는다. 
+                가로글이를 잡아주면 글자수의 상관없이 가로길이가 같아지므로 마진을 줘도 글앞머리가 일직선이 된다.*/
+}
+section.me ul.list ul.in li p {
+    float: left;
+    position: relative;
+}
+section.me ul.list ul.in li p::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #ff8342;
+    position: absolute;
+    left: -40px;
+    top: 10px;
+    /* ::before, after 에서 필수 속성 : content: '';, display:block; */
+    /* display:block; 이 없는이유 : float 나 position이 있으면 display:block; 이 자동으로 들어간다. */
+}
+
+#incruit-btn {
+    display: block;
+    width: 280px;
+    background: #ff8342;
+    color: #fff;
+    margin: 0 auto;
+    font-weight: 700;
+    border-radius: 50px;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+
+/* section sns style */
+
+section.sns {
+    margin-bottom: 60px;
+}
+section.sns ul {
+    width: 74%;
+    margin: 50px auto;
+}
+
+section.sns ul li {
+    float: left;
+    /* border: 2px solid #000; */
+    box-sizing: border-box;
+
+    width: 32%;
+    margin-right: 2%;
+}
+
+section.sns ul li:last-child {
+    margin-right: 0;
+}
+
+section.sns ul li .img-box {
+    height: 210px;
+    overflow: hidden;
+    
+}
+
+section.sns ul li .img-box img {
+    width: 100%;
+}
+
+section.sns ul li .bottom {
+    padding: 20px 0 20px 30px;
+    box-sizing: border-box;
+}
+section.sns ul li .bottom p {
+    font-size: 18px;
+}
+section.sns ul li .bottom p.color {
+    color: #ff8342;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+section.sns ul li .bottom p.time {
+    color: #999;
+    font-size: 14px;
+    margin-top: 30px;
+}
+section.sns ul li .bottom p.time i {
+    margin-right: 5px;
+    font-size: 0.9em;
+}
+
+/* footer style */
+footer {
+    border-top: 1px solid #999;
+    padding: 30px 0;
+}
+footer .inner {
+    width: 84%;
+    margin: 0 auto;
+}
+footer .inner .ft-logo {
+    float: left;
+    width: 14%;
+}
+footer .inner .ft-logo img {
+    width: 100%;
+}
+footer .inner .address {
+    float: left;
+    margin-left: 100px;
+    margin-top: 35px;
+}
+footer .inner .address li:first-child {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+footer .inner .address li:last-child {
+    color: #999;
+}
+
+footer .inner .list {
+    float: right;
+    margin-top: 40px;
+}
+footer .inner .list li {
+    float: left;
+    margin-left: 80px;
+}
+footer .inner .list li:last-child {
+    font-weight: 700;
+}
+footer .inner .list li a:hover {
+    color: #ff8342;
+    text-decoration: underline;
+}
